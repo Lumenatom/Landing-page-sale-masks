@@ -1,0 +1,886 @@
+@import "_resetStyle.scss";
+$fontFamily-OpenSans: 'Open Sans', sans-serif;
+$fontFamily-Rubik: 'Rubik', sans-serif;
+$color-Dark: #0C122D;
+$color-White: #ffffff;
+$color-Blue: #1B5FC1;
+$color-Yellow: #FFB800;
+$color-Grey: #575C74;
+$color-Background: #F5FCFA;
+$color-Black: #000000;
+
+
+@mixin buttons {
+    font-family: $fontFamily-Rubik;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 30px;
+    padding: 8px 24px;
+    border-radius: 8px;
+}
+
+
+body {
+    background-color: #E5E5E5;
+
+    .wraper {
+        width: 1920px;
+        background-color: $color-Background;
+        margin: 0 auto;
+
+        .background-image-header {
+            background: url(./img/delivery-of-goods.png);
+            width: 927px;
+            height: 891px;
+            position: absolute;
+            opacity: 0.2;
+            border-radius: 0px 0px 0px 150px;
+            margin-left: 993px;
+        }
+
+        .container {
+            width: 1140px;
+            margin: 0 auto;
+            position: relative;
+
+
+            .nav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .nav_logo {
+                    margin-top: 24px;
+                    width: 141px;
+                    height: 40px;
+                }
+
+                .nav_navigate {
+                    display: flex;
+                    align-items: center;
+                    margin-top: 24px;
+
+
+                    .nav_link {
+                        display: flex;
+
+                        a {
+                            margin-right: 47px;
+                            font-family: $fontFamily-OpenSans;
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 30px;
+                            color: $color-Dark;
+                            text-decoration: none;
+                            cursor: pointer;
+
+                        }
+                    }
+
+                    .nav_button {
+                        button {
+                            color: $color-White;
+                            background-color: $color-Blue;
+                            font-family: $fontFamily-Rubik;
+                            font-weight: 500;
+                            font-size: 14px;
+                            line-height: 30px;
+                            border-radius: 8px;
+                            padding: 8px 24px;
+                        }
+                    }
+                }
+
+            }
+
+            .header {
+                margin-top: 80px;
+
+
+                .header-main_block {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 61px;
+
+
+                    .header_information {
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        margin-right: 88px;
+
+                        .text {
+                            margin-bottom: 30px;
+
+                            p {
+                                font-family: $fontFamily-Rubik;
+                                color: $color-Yellow;
+                                font-weight: 500;
+                                font-size: 14px;
+                                line-height: 30px;
+                            }
+                        }
+
+                        .title {
+                            margin-bottom: 40px;
+
+                            h1 {
+                                font-family: $fontFamily-Rubik;
+                                font-weight: 700;
+                                font-size: 72px;
+                                line-height: 82px;
+                                color: $color-Dark;
+                            }
+                        }
+
+                        .description {
+                            width: 490px;
+                            height: 96px;
+                            margin-bottom: 62px;
+
+                            p {
+                                font-family: $fontFamily-OpenSans;
+                                font-weight: 400;
+                                font-size: 16px;
+                                line-height: 24px;
+                                color: $color-Grey;
+                            }
+                        }
+
+                        .buttons {
+                            display: flex;
+                            gap: 10px;
+
+                            .header_button_one {
+                                @include buttons();
+                                color: $color-White;
+                                background-color: $color-Blue;
+                                box-shadow: 0px 10px 15px rgba(27, 95, 193, 0.19);
+
+                            }
+
+                            .header_button_two {
+                                @include buttons();
+                                background-color: $color-Background;
+                                color: $color-Yellow;
+                                border: 1px solid #FFB800
+                            }
+                        }
+                    }
+
+                    .header_img {
+                        img {
+                            width: 496px;
+                            height: 744px;
+                            border-radius: 16px 16px 16px 0px;
+                        }
+                    }
+                }
+
+                .header-item_block {
+                    display: flex;
+                    gap: 31px;
+                    width: 1141px;
+                    height: 179px;
+                    margin-bottom: 53px;
+
+                    .content {
+                        display: flex;
+                        flex-wrap: nowrap;
+                        justify-content: space-between;
+                        width: 270px;
+                        height: 179px;
+
+                        .content-img {
+                            margin-right: 25px;
+
+                            img {
+                                width: 40;
+                                height: 40;
+                            }
+                        }
+
+                        .content-description {
+                            h3 {
+                                font-family: $fontFamily-OpenSans;
+                                font-style: normal;
+                                font-weight: 700;
+                                font-size: 20px;
+                                line-height: 28px;
+                                color: $color-Dark;
+                                margin-bottom: 15px;
+                            }
+
+                            p {
+                                font-family: $fontFamily-OpenSans;
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 15px;
+                                line-height: 22px;
+                                color: $color-Grey;
+                            }
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+        .about {
+            display: flex;
+            background-color: $color-White ;
+            max-width: 1920px;
+            padding-top: 80px;
+
+            .container {
+                .about-block {
+                    display: flex;
+                    gap: 47px;
+
+                    .about-img {
+                        img {
+                            width: 570px;
+                            height: 616px;
+                            left: 391px;
+                            top: 1275px;
+                            border-radius: 16px 16px 16px 0px;
+                        }
+                    }
+
+                    .about-description {
+                        margin-bottom: 90px;
+
+                        h3 {
+                            font-family: $fontFamily-Rubik;
+                            font-weight: 700;
+                            font-size: 48px;
+                            line-height: 50px;
+                            color: $color-Dark;
+                            margin-bottom: 23px;
+                        }
+
+                        .description {
+                            p {
+                                font-family: $fontFamily-OpenSans;
+                                font-style: normal;
+                                font-weight: 700;
+                                font-size: 16px;
+                                line-height: 30px;
+                                color: $color-Grey;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .info {
+            background-color: $color-White ;
+            max-width: 1920px;
+            margin-bottom: 80px;
+
+            .container {
+                display: flex;
+
+                .info-block_one {
+                    background-image: url(./img/info-block_one.png);
+                    background-repeat: no-repeat;
+                    display: flex;
+                    flex-direction: column-reverse;
+                    align-items: flex-end;
+                    width: 796px;
+                    height: 612px;
+                    width: 50%;
+
+                    .info-block_one-description {
+                        width: 285px;
+                        height: 332px;
+
+                        p {
+                            background-color: $color-Blue;
+                            padding: 60px 30px;
+                            font-family: $fontFamily-OpenSans;
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 15px;
+                            line-height: 24px;
+                            color: $color-White;
+                        }
+                    }
+                }
+
+                .info-block_two {
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 50%;
+
+                    .info-block_two-description {
+                        display: flex;
+
+                        .item-one {
+                            width: 50%;
+
+                            p {
+                                background-color: $color-White;
+                                padding: 80px 30px;
+                                font-family: $fontFamily-OpenSans;
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 15px;
+                                line-height: 24px;
+                                color: $color-Grey;
+                            }
+                        }
+
+                        .item-two {
+                            width: 50%;
+                            background-color: $color-Blue;
+                            border-radius: 0px 20px 0px 0px;
+
+                            p {
+                                font-family: $fontFamily-OpenSans;
+                                padding: 80px 30px 132px;
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 15px;
+                                line-height: 24px;
+                                color: $color-White;
+
+
+                            }
+                        }
+                    }
+
+                    .info-block_two-contact {
+                        display: flex;
+                        flex-wrap: wrap;
+                        padding: 15px 40px 50px 38px;
+                        height: 240px;
+                        border-radius: 0px 0px 20px 0px;
+                        background-color: $color-Yellow;
+
+                        .info-information {
+                            .info-title {
+                                h3 {
+
+                                    font-family: $fontFamily-Rubik;
+                                    font-style: normal;
+                                    font-weight: 700;
+                                    font-size: 20px;
+                                    line-height: 50px;
+                                    color: $color-Dark;
+                                    margin-bottom: 5px;
+                                }
+                            }
+
+                            .info-description {
+                                p {
+                                    font-family: $fontFamily-OpenSans;
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    font-size: 15px;
+                                    line-height: 24px;
+                                    color: $color-Black;
+                                    margin-bottom: 28px;
+                                }
+                            }
+                        }
+
+                        .info-comunication {
+                            width: 100%;
+                            display: flex;
+
+                            .info-button {
+                                margin-right: 40px;
+
+                                button {
+                                    font-family: $fontFamily-Rubik;
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    font-size: 14px;
+                                    line-height: 30px;
+                                    color: $color-Blue;
+                                    background-color: $color-Yellow;
+                                    border: 1px solid #1B5FC1;
+                                    border-radius: 8px;
+                                    padding: 8px 24px;
+                                }
+                            }
+
+                            .vertical-line {
+                                width: 1px;
+                                height: 46px;
+                                background-color: $color-White;
+                                margin-right: 40px;
+
+                            }
+
+                            .info-phone {
+                                a {
+                                    display: flex;
+
+                                    .info-img {
+                                        img {
+                                            width: 46px;
+                                            height: 46px;
+                                        }
+                                    }
+
+                                    .info-tell {
+                                        margin-left: 13px;
+
+                                        p {
+
+                                            font-family: $fontFamily-OpenSans;
+                                            font-style: normal;
+                                            font-weight: 600;
+                                            font-size: 14px;
+                                            line-height: 24px;
+                                            color: $color-Blue;
+                                        }
+
+                                        h3 {
+
+                                            font-family: $fontFamily-OpenSans;
+                                            font-style: normal;
+                                            font-weight: 600;
+                                            font-size: 24px;
+                                            line-height: 24px;
+                                            color: $color-Black;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .certification {
+            margin-bottom: 80px;
+
+            .container {
+                .certification-main {
+                    display: flex;
+                    align-items: center;
+
+                    .certification-block_one {
+                        P {
+                            font-family: $fontFamily-OpenSans;
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 15px;
+                            line-height: 24px;
+                            color: $color-Grey;
+                            margin-right: 16px;
+                        }
+                    }
+
+                    .certification-block_two {
+                        hr {
+                            width: 147px;
+                            height: 1px;
+                            background: $color-Yellow;
+                            margin-right: 87px;
+
+                        }
+                    }
+
+                    .certification-block_three {
+                        img {
+                            width: 66.78px;
+                            height: 80px;
+                            margin-right: 100.22px;
+                        }
+                    }
+
+                    .certification-block_four {
+                        img {
+                            width: 126.01px;
+                            height: 80px;
+                            margin-right: 99.99px;
+                        }
+                    }
+
+                    .certification-block_five {
+                        img {
+                            width: 104.82px;
+                            height: 80px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .reasons {
+            margin-bottom: 61px;
+
+            .container {
+                display: flex;
+
+                .reasons-img {
+                    margin-right: 90px;
+
+                    img {
+                        width: 400px;
+                        height: 630px;
+                        border-radius: 16px 16px 16px 0px;
+                    }
+                }
+
+                .reasons-description {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    .reasons-title {
+                        margin-bottom: 35px;
+
+                        h3 {
+                            font-family: $fontFamily-Rubik;
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 48px;
+                            line-height: 50px;
+                            color: $color-Dark;
+                            margin-bottom: 20px;
+                        }
+
+                        p {
+                            font-family: $fontFamily-OpenSans;
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 30px;
+                            color: $color-Grey;
+                        }
+                    }
+
+                    .reasons-facts {
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        .reasons-item {
+                            display: flex;
+                            max-width: 48%;
+
+                            &:nth-child(odd) {
+                                margin-right: 26px;
+                            }
+
+                            &:nth-child(-n+2) {
+                                margin-bottom: 23px;
+                            }
+
+                            .reasons-icon {
+                                margin-right: 17px;
+
+                                img {
+                                    width: 56px;
+                                    height: 56px;
+                                }
+                            }
+
+                            .reasons-data {
+                                h3 {
+                                    font-family: $fontFamily-OpenSans;
+                                    font-style: normal;
+                                    font-weight: 700;
+                                    font-size: 20px;
+                                    line-height: 28px;
+                                    color: $color-Dark;
+                                    margin-bottom: 8px;
+                                }
+
+                                p {
+                                    font-family: $fontFamily-OpenSans;
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    font-size: 15px;
+                                    line-height: 22px;
+                                    color: $color-Grey;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .comment {
+            .comment-main {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 88px;
+
+                // img {}
+            }
+        }
+
+        .shop_now {
+            margin-bottom: 120px;
+
+            .container {
+                display: flex;
+                justify-content: center;
+
+                .shop_now-main {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    width: 750px;
+                    height: 210px;
+
+
+                    .shop_now-title {
+                        h3 {
+                            font-family: $fontFamily-Rubik;
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 48px;
+                            line-height: 50px;
+                            text-align: center;
+                            color: $color-Dark;
+                        }
+
+                        p {
+                            font-family: $fontFamily-OpenSans;
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 30px;
+                            text-align: center;
+                            color: $color-Grey;
+                            padding: 30px 37px 29px 49px;
+                        }
+                    }
+
+                    .shop_now-button {
+
+                        button {
+                            @include buttons();
+                            color: $color-White;
+                            background-color: $color-Blue;
+                            box-shadow: 0px 10px 15px rgba(27, 95, 193, 0.19);
+
+
+                        }
+                    }
+                }
+            }
+        }
+
+        .contacts {
+            background-color: $color-Yellow;
+
+
+            .container {
+                .contacts-main {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 41px 0 39px;
+
+                    .contacts-item {
+                        display: flex;
+                        flex-wrap: nowrap;
+
+                        .contacts-icon {
+                            margin-right: 15px;
+
+                            img {
+                                &:nth-child(1) {
+                                    width: 25.6px;
+                                    height: 32px;
+                                }
+
+                                &:nth-child(2) {
+                                    width: 32px;
+                                    height: 32px;
+                                }
+
+                                &:nth-child(3) {
+                                    width: 32px;
+                                    height: 22.86px;
+                                }
+                            }
+                        }
+
+                        .contacts-title {
+                            h3 {
+                                font-family: $fontFamily-Rubik;
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: 20px;
+                                line-height: 30px;
+                                color: $color-Dark;
+                            }
+
+                            p {
+                                font-family: $fontFamily-OpenSans;
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 15px;
+                                line-height: 20px;
+                                color: $color-Dark;
+                            }
+                        }
+                    }
+
+                    .contacts-block_line {
+                        width: 1px;
+                        height: 52px;
+                        background: #E0E0E0;
+
+                    }
+                }
+            }
+        }
+
+        footer {
+            background-color: #ECF0F5;
+            padding-top: 73px;
+
+            .container {
+                .footer-main {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    margin-bottom: 14px;
+
+                    .footer-about {
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        .footer-about-logo {
+                            margin-bottom: 33px;
+
+                            img {
+                                width: 161px;
+                                height: 40px;
+                            }
+                        }
+
+                        .footer-about-description {
+                            margin-right: 299px;
+
+                            p {
+                                font-family: $fontFamily-OpenSans;
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 15px;
+                                line-height: 24px;
+                                color: $color-Grey;
+                            }
+                        }
+                    }
+
+                    .footer-company {
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin-right: 299px;
+
+                        .compaty-title {
+                            margin-bottom: 12px;
+
+                            h3 {
+                                font-family: $fontFamily-Rubik;
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: 20px;
+                                line-height: 30px;
+                                color: $color-Dark;
+                            }
+
+                        }
+
+                        .company-navigete {
+                            .company-navigete-link {
+
+                                h3 {
+                                    font-family: $fontFamily-OpenSans;
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    font-size: 15px;
+                                    line-height: 30px;
+                                    color: $color-Grey;
+                                }
+                            }
+                        }
+                    }
+
+                    .footer-follow_us {
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        .follow_us-main {
+                            h3 {
+                                font-family: $fontFamily-Rubik;
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: 20px;
+                                line-height: 30px;
+                                color: $color-Dark;
+                            }
+                        }
+
+                        .folllow_us-social {
+                            display: flex;
+                            flex-wrap: nowrap;
+
+                            .follow_us-icons {
+                                margin-right: 13.82px;
+
+                                img {
+                                    width: 22.18px;
+                                    height: 129px;
+                                }
+                            }
+
+                            .follow_us-item {
+                                .follow_us-title {
+                                    a {
+                                        h3 {
+                                            font-family: $fontFamily-OpenSans;
+                                            font-style: normal;
+                                            font-weight: 400;
+                                            font-size: 15px;
+                                            line-height: 30px;
+                                            color: $color-Grey;
+                                            margin-top: -2px;
+
+                                        }
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .footer-line {
+                align-items: center;
+                width: 1920px;
+                height: 1px;
+                background: #E1E6EC;
+                margin-bottom: 31.72px;
+            }
+
+            .footer-information {
+                p {
+                    font-family: $fontFamily-OpenSans;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 30px;
+                    color: $color-Grey;
+                    text-align: center;
+                    margin-bottom: 30.28px;
+                }
+            }
+        }
+    }
+}
